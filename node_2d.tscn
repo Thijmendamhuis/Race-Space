@@ -1,13 +1,19 @@
 [gd_scene load_steps=2 format=3 uid="uid://c34hewvuvibec"]
 
-[ext_resource type="Texture2D" uid="uid://dv7hnbq76f3po" path="res://icon.svg" id="1_xyf4b"]
+[ext_resource type="Texture2D" uid="uid://xtacgqcvheom" path="res://imkv74m4q5g41.png" id="1_fxqom"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(238, 156)
-texture = ExtResource("1_xyf4b")
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -387.0
+offset_right = 2092.0
+offset_bottom = 917.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_fxqom")
+stretch_mode = 1
