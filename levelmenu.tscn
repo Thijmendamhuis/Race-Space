@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://xc4uo2lv3wo1"]
+[gd_scene load_steps=3 format=3 uid="uid://xc4uo2lv3wo1"]
+
+[ext_resource type="Script" path="res://levelmenu.gd" id="1_emuxe"]
+[ext_resource type="Texture2D" uid="uid://xtacgqcvheom" path="res://imkv74m4q5g41.png" id="1_qcup6"]
 
 [node name="Levelmenu" type="Control"]
 layout_mode = 3
@@ -7,17 +10,36 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_emuxe")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 640.0
+texture = ExtResource("1_qcup6")
+expand_mode = 2
+stretch_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.0
+offset_top = -50.5
+offset_right = -18.0
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
 [node name="Level" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Level: 1"
 
@@ -26,8 +48,36 @@ layout_mode = 2
 size_flags_vertical = 4
 text = "Level: 2"
 
-[node name="Level3" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 11.2621
+offset_top = -50.5
+offset_right = 77.2621
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="Level3" type="Button" parent="MarginContainer2/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Level: 3"
+
+[node name="Level4" type="Button" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Level: 4"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Level" to="." method="_on_level_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/Level3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/Level4" to="." method="_on_level_4_pressed"]

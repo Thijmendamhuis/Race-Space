@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://xtacgqcvheom" path="res://imkv74m4q5g41.png" id="1_hufx7"]
 
-[node name="levelmenu" type="Control"]
+[node name="Level1" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
