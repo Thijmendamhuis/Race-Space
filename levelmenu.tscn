@@ -1,7 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://xc4uo2lv3wo1"]
+[gd_scene load_steps=3 format=3 uid="uid://3bres7n2377f"]
 
-[ext_resource type="Script" path="res://levelmenu.gd" id="1_emuxe"]
 [ext_resource type="Texture2D" uid="uid://xtacgqcvheom" path="res://imkv74m4q5g41.png" id="1_qcup6"]
+
+[sub_resource type="GDScript" id="GDScript_g7wuw"]
+script/source = "extends Control
+
+
+func _on_level_pressed():
+	get_tree().change_scene_to_file(\"res://level1.tscn\")
+
+
+func _on_level_2_pressed():
+	get_tree().change_scene_to_file(\"res://level2.tscn\")
+
+
+func _on_level_3_pressed():
+	get_tree().change_scene_to_file(\"res://level3.tscn\")
+
+func _on_level_4_pressed():
+	get_tree().change_scene_to_file(\"res://level4.tscn\")
+"
 
 [node name="Levelmenu" type="Control"]
 layout_mode = 3
@@ -10,7 +28,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_emuxe")
+script = SubResource("GDScript_g7wuw")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1152.0

@@ -1,7 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://cusqlbnehothu"]
+[gd_scene load_steps=4 format=3 uid="uid://k06sr3fq0dai"]
 
-[ext_resource type="Script" path="res://Menu.gd" id="1_6yytj"]
 [ext_resource type="Texture2D" uid="uid://xtacgqcvheom" path="res://imkv74m4q5g41.png" id="2_a0whw"]
+
+[sub_resource type="GDScript" id="GDScript_feb4m"]
+script/source = "extends Control
+
+
+func _on_spelen_pressed():
+	get_tree().change_scene_to_file(\"res://levelmenu.tscn\")
+
+"
 
 [sub_resource type="Theme" id="Theme_eer44"]
 
@@ -12,7 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_6yytj")
+script = SubResource("GDScript_feb4m")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
