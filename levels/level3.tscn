@@ -1,10 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://dvlevp6chceew"]
 
-[ext_resource type="Texture2D" uid="uid://xtacgqcvheom" path="res://imkv74m4q5g41.png" id="1_5u6in"]
-[ext_resource type="Texture2D" uid="uid://bknunmr6esa50" path="res://Terrain (16x16).png" id="2_0perg"]
+[ext_resource type="Texture2D" uid="uid://xtacgqcvheom" path="res://assets/imkv74m4q5g41.png" id="1_hblqf"]
+[ext_resource type="Texture2D" uid="uid://bknunmr6esa50" path="res://assets/Terrain (16x16).png" id="2_usu2s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o3ida"]
-texture = ExtResource("2_0perg")
+texture = ExtResource("2_usu2s")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -160,7 +160,7 @@ offset_left = -5220.0
 offset_top = -5091.0
 offset_right = 16472.0
 offset_bottom = 3921.0
-texture = ExtResource("1_5u6in")
+texture = ExtResource("1_hblqf")
 stretch_mode = 1
 
 [node name="TileMap" type="TileMap" parent="TextureRect"]

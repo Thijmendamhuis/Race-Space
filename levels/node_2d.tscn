@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c34hewvuvibec"]
 
-[ext_resource type="Texture2D" uid="uid://xtacgqcvheom" path="res://imkv74m4q5g41.png" id="1_fxqom"]
+[ext_resource type="Texture2D" uid="uid://xtacgqcvheom" path="res://assets/imkv74m4q5g41.png" id="1_mb3c6"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -15,5 +15,5 @@ offset_right = 1978.0
 offset_bottom = 856.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_fxqom")
+texture = ExtResource("1_mb3c6")
 stretch_mode = 1
