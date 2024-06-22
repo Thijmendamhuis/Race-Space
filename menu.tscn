@@ -1,6 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://k06sr3fq0dai"]
-
-[ext_resource type="Texture2D" path="res://imkv74m4q5g41.png" id="2_a0whw"]
+[gd_scene load_steps=3 format=3 uid="uid://k06sr3fq0dai"]
 
 [sub_resource type="GDScript" id="GDScript_feb4m"]
 script/source = "extends Control
@@ -24,9 +22,10 @@ script = SubResource("GDScript_feb4m")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 640.0
-texture = ExtResource("2_a0whw")
+offset_left = -167.0
+offset_top = -31.0
+offset_right = 985.0
+offset_bottom = 609.0
 expand_mode = 2
 stretch_mode = 1
 
