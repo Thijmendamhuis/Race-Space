@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dua0fifakhx2t"]
+[gd_scene load_steps=8 format=3 uid="uid://dua0fifakhx2t"]
 
 [ext_resource type="Texture2D" uid="uid://c61lxicfwfutm" path="res://assets/Free/Terrain/Terrain (16x16).png" id="1_l154i"]
 [ext_resource type="PackedScene" uid="uid://dx8up5rrv5k4w" path="res://speler.tscn" id="2_5h4ef"]
 [ext_resource type="Texture2D" uid="uid://dgoksf2xrxp6u" path="res://Brick.png" id="2_qpvae"]
+[ext_resource type="PackedScene" uid="uid://ol12o38b4gv5" path="res://slime.tscn" id="4_v6tsd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qfgdu"]
 texture = ExtResource("1_l154i")
@@ -609,4 +610,7 @@ ignore_rotation = false
 zoom = Vector2(2, 2)
 
 [node name="Speler" parent="." instance=ExtResource("2_5h4ef")]
-position = Vector2(-98.7844, -107.59)
+position = Vector2(-334.784, -107.59)
+
+[node name="Slime" parent="." instance=ExtResource("4_v6tsd")]
+position = Vector2(229.216, -15.5905)

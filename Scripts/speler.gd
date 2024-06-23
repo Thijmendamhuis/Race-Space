@@ -19,8 +19,11 @@ enum SpelerMode {
 @export var jump_velocity = -400
 @export_group("")
 
-
-
+@export_group("Dood Enemy")
+@export var min_dood_degree = 35
+@export var max_dood_degree = 145
+@export var dood_y_velocity = -150
+@export_group("")
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -39,5 +42,30 @@ func _physics_process(delta):
 	else: 
 		velocity.x = move_toward(velocity.x, 0, speed * delta)
 		
-		
+
 	move_and_slide()
+
+
+func _on_area_2d_area_entered(area):
+	if area is Enemy:
+		handle_enemy_collision(area)
+		
+func handle_enemy_collision(enemy: Enemy):
+	if enemy == null:
+		return
+
+	var angle_of_collision = rad_to_deg(position.angle_to_point(enemy.position))
+	
+	if angle_of_collision > min_dood_degree && max_dood_degree > angle_of_collision:
+		enemy.die()
+		on_enemy_stopped()
+	else:
+		die()
+		
+		
+func on_enemy_stopped():
+	velocity.y = dood_y_velocity
+	
+func die():
+	print("die")
+		
