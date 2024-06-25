@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2yvxkf43j6ro"
-path="res://.godot/imported/astronaut staan links.png-e6eb66771c51af273904216205ff7b55.ctex"
+uid="uid://b22l63ls44i4i"
+path="res://.godot/imported/Astronaut rechts.png-df9886e07ceda743c08f30f82cddfbfc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://astronaut staan links.png"
-dest_files=["res://.godot/imported/astronaut staan links.png-e6eb66771c51af273904216205ff7b55.ctex"]
+source_file="res://Astronaut/Astronaut rechts.png"
+dest_files=["res://.godot/imported/Astronaut rechts.png-df9886e07ceda743c08f30f82cddfbfc.ctex"]
 
 [params]
 

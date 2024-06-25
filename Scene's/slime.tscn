@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bj5lxdwvccvmv"]
+[gd_scene load_steps=19 format=3 uid="uid://ol12o38b4gv5"]
 
 [ext_resource type="Script" path="res://Scripts/slime.gd" id="1_3uiev"]
 [ext_resource type="Texture2D" uid="uid://bomm2oiwoeqnf" path="res://Slime/slime dead 3.png" id="2_ahwbf"]
