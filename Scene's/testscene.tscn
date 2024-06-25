@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dua0fifakhx2t"]
+[gd_scene load_steps=10 format=3 uid="uid://dua0fifakhx2t"]
 
 [ext_resource type="Texture2D" uid="uid://c61lxicfwfutm" path="res://assets/Free/Terrain/Terrain (16x16).png" id="1_l154i"]
 [ext_resource type="PackedScene" uid="uid://dx8up5rrv5k4w" path="res://Scene's/speler.tscn" id="2_5h4ef"]
 [ext_resource type="Texture2D" uid="uid://dgoksf2xrxp6u" path="res://Brick.png" id="2_qpvae"]
 [ext_resource type="PackedScene" uid="uid://ol12o38b4gv5" path="res://Scene's/slime.tscn" id="4_v6tsd"]
 [ext_resource type="PackedScene" uid="uid://oxv67fyygmbd" path="res://Scene's/brick.tscn" id="5_apejc"]
+[ext_resource type="PackedScene" uid="uid://d1a342bvn4p7k" path="res://Scene's/static_body_2d.tscn" id="6_xtypw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qfgdu"]
 texture = ExtResource("1_l154i")
@@ -615,6 +616,9 @@ position = Vector2(-300.784, -33.5905)
 
 [node name="Slime" parent="." instance=ExtResource("4_v6tsd")]
 position = Vector2(227.216, -0.5905)
+
+[node name="MysteryBox" parent="." instance=ExtResource("6_xtypw")]
+position = Vector2(-94.7844, -54.5905)
 
 [node name="Brick" parent="." instance=ExtResource("5_apejc")]
 position = Vector2(-175.784, -54.5905)
