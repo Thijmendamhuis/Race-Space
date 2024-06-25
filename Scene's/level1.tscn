@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://drhgv2s8awjwt"]
+[gd_scene load_steps=6 format=3 uid="uid://drhgv2s8awjwt"]
 
-[ext_resource type="Texture2D" uid="uid://xtacgqcvheom" path="res://imkv74m4q5g41.png" id="1_hufx7"]
-[ext_resource type="Texture2D" uid="uid://bknunmr6esa50" path="res://Terrain (16x16).png" id="2_c8ub6"]
+[ext_resource type="Texture2D" uid="uid://dqjosmomm4rb8" path="res://imkv74m4q5g41.png" id="1_hufx7"]
+[ext_resource type="Texture2D" uid="uid://c0to0h0lso7l4" path="res://Terrain (16x16).png" id="2_c8ub6"]
+[ext_resource type="PackedScene" uid="uid://oxv67fyygmbd" path="res://Scene's/brick.tscn" id="2_yplr6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8h6up"]
 texture = ExtResource("2_c8ub6")
@@ -171,6 +172,9 @@ offset_right = 5549.58
 offset_bottom = 1217.0
 texture = ExtResource("1_hufx7")
 stretch_mode = 1
+
+[node name="Brick" parent="TextureRect" instance=ExtResource("2_yplr6")]
+position = Vector2(1237.05, 1042)
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-2.99288, 5)

@@ -43,6 +43,9 @@ func _physics_process(delta):
 
 	var direction = Input.get_axis("ui_left", "ui_right")
 
+
+
+		
 	if direction != 0:
 		velocity.x = lerp(velocity.x, speed * direction, run_speed_damping * delta)
 	else:
@@ -88,3 +91,5 @@ func die():
 
 func _on_death_tween_complete():
 	get_tree().reload_current_scene()
+
+

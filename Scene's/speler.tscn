@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dx8up5rrv5k4w"]
 
-[ext_resource type="Texture2D" uid="uid://lrxupv3ny64y" path="res://astronaut.png" id="1_lecon"]
+[ext_resource type="Texture2D" uid="uid://b7jeu60wmy0nq" path="res://astronaut.png" id="1_lecon"]
 [ext_resource type="Script" path="res://Scripts/speler.gd" id="1_v7db6"]
 [ext_resource type="Shape2D" uid="uid://b42xb6wf5jkhn" path="res://speler_collision_shape.tres" id="3_k8qxp"]
 
