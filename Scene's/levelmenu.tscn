@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://b0tkfomxn2cd1"]
 
-[ext_resource type="Script" path="res://Scripts/levelmenu.gd" id="1_f6836"]
+[ext_resource type="Script" path="res://Scripts/levels.gd" id="1_f6836"]
 [ext_resource type="Texture2D" uid="uid://dqjosmomm4rb8" path="res://imkv74m4q5g41.png" id="1_fgvfr"]
 
-[node name="Levelmenu" type="Control"]
+[node name="Levels" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,13 +22,37 @@ texture = ExtResource("1_fgvfr")
 expand_mode = 2
 stretch_mode = 1
 
-[node name="Level1" type="Button" parent="."]
+[node name="Levels" type="GridContainer" parent="."]
 layout_mode = 0
-offset_left = 128.0
-offset_top = 320.0
-offset_right = 234.0
-offset_bottom = 383.0
+offset_left = 384.0
+offset_top = 216.0
+offset_right = 520.0
+offset_bottom = 352.0
+scale = Vector2(3.00299, 3.3066)
+columns = 2
+
+[node name="1" type="Button" parent="Levels"]
+layout_mode = 2
+disabled = true
 text = "Level: 1"
+
+[node name="2" type="Button" parent="Levels"]
+layout_mode = 2
+disabled = true
+text = "Level: 2
+"
+
+[node name="3" type="Button" parent="Levels"]
+layout_mode = 2
+disabled = true
+text = "Level: 3
+"
+
+[node name="4" type="Button" parent="Levels"]
+layout_mode = 2
+disabled = true
+text = "Level: 4
+"
 
 [node name="Winkel" type="Button" parent="."]
 layout_mode = 0
@@ -38,35 +62,8 @@ offset_right = 169.0
 offset_bottom = 574.0
 text = "Winkel"
 
-[node name="level2" type="Button" parent="."]
-layout_mode = 0
-offset_left = 384.0
-offset_top = 320.0
-offset_right = 483.0
-offset_bottom = 381.0
-text = "Level: 2
-"
-
-[node name="level3" type="Button" parent="."]
-layout_mode = 0
-offset_left = 640.0
-offset_top = 320.0
-offset_right = 739.0
-offset_bottom = 381.0
-text = "Level: 3
-"
-
-[node name="level4" type="Button" parent="."]
-layout_mode = 0
-offset_left = 896.0
-offset_top = 320.0
-offset_right = 995.0
-offset_bottom = 381.0
-text = "Level: 4
-"
-
-[connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="Levels/1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="Levels/2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="Levels/3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="Levels/4" to="." method="_on_level_4_pressed"]
 [connection signal="pressed" from="Winkel" to="Winkel" method="_on_pressed"]
-[connection signal="pressed" from="level2" to="." method="_on_level_2_pressed"]
-[connection signal="pressed" from="level3" to="." method="_on_level_3_pressed"]
-[connection signal="pressed" from="level4" to="." method="_on_level_4_pressed"]

@@ -15,7 +15,6 @@ enum SpelerMode {
 @onready var body_collision_shape = $BodyCollisionShape
 @onready var area_2d = $Area2D
 
-
 @export_group("locomotion")
 @export var run_speed_damping = 0.5
 @export var speed = 200
@@ -26,6 +25,10 @@ enum SpelerMode {
 @export var min_dood_degree = 35
 @export var max_dood_degree = 145
 @export var dood_y_velocity = -150
+@export_group("")
+
+@export_group("Death Threshold")
+@export var death_y_threshold = 200
 @export_group("")
 
 var player_mode = SpelerMode.SMALL
@@ -43,15 +46,16 @@ func _physics_process(delta):
 
 	var direction = Input.get_axis("ui_left", "ui_right")
 
-
-
-		
 	if direction != 0:
 		velocity.x = lerp(velocity.x, speed * direction, run_speed_damping * delta)
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed * delta)
 
 	move_and_slide()
+
+	# Check if the player falls below the death threshold
+	if global_position.y > death_y_threshold:
+		die()
 
 func _on_area_2d_area_entered(area):
 	if area is Enemy:
@@ -85,9 +89,4 @@ func die():
 		set_physics_process(false)
 
 		var death_tween = get_tree().create_tween()
-		death_tween.tween_property(self, "position", position + Vector2(0, -48), 0.5)
-		death_tween.chain().tween_property(self, "position", position + Vector2(0, 256), 1)
 		death_tween.tween_callback(func (): get_tree().reload_current_scene())
-		
-
-

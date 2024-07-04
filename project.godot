@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 <<<<<<<HEADrun/main_scene="res://Scene's/menu.tscn"
 
+[autoload]
+
+Global="*res://Scripts/glob.gd"
+
 [dotnet]
 
 project/assembly_name="15529"
