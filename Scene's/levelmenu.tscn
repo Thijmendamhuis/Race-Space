@@ -1,0 +1,72 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0tkfomxn2cd1"]
+
+[ext_resource type="Script" path="res://Scene's/levelmenu.gd" id="1_f6836"]
+[ext_resource type="Texture2D" uid="uid://dqjosmomm4rb8" path="res://imkv74m4q5g41.png" id="1_fgvfr"]
+
+[node name="Levelmenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f6836")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -259.0
+offset_top = -116.0
+offset_right = 1358.0
+offset_bottom = 802.0
+texture = ExtResource("1_fgvfr")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="Level1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 320.0
+offset_right = 234.0
+offset_bottom = 383.0
+text = "Level: 1"
+
+[node name="Winkel" type="Button" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 512.0
+offset_right = 169.0
+offset_bottom = 574.0
+text = "Winkel"
+
+[node name="level2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 320.0
+offset_right = 483.0
+offset_bottom = 381.0
+text = "Level: 2
+"
+
+[node name="level3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 320.0
+offset_right = 739.0
+offset_bottom = 381.0
+text = "Level: 3
+"
+
+[node name="level4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 320.0
+offset_right = 995.0
+offset_bottom = 381.0
+text = "Level: 4
+"
+
+[connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="Winkel" to="Winkel" method="_on_pressed"]
+[connection signal="pressed" from="level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="level3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="level4" to="." method="_on_level_4_pressed"]

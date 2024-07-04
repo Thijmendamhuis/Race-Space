@@ -87,9 +87,7 @@ func die():
 		var death_tween = get_tree().create_tween()
 		death_tween.tween_property(self, "position", position + Vector2(0, -48), 0.5)
 		death_tween.chain().tween_property(self, "position", position + Vector2(0, 256), 1)
-		death_tween.tween_callback(Callable(self, "_on_death_tween_complete"))
-
-func _on_death_tween_complete():
-	get_tree().reload_current_scene()
+		death_tween.tween_callback(func (): get_tree().reload_current_scene())
+		
 
 

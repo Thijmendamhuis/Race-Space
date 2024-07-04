@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://k06sr3fq0dai"]
+[gd_scene load_steps=4 format=3 uid="uid://k06sr3fq0dai"]
+
+[ext_resource type="Texture2D" uid="uid://dqjosmomm4rb8" path="res://imkv74m4q5g41.png" id="1_i8js7"]
 
 [sub_resource type="GDScript" id="GDScript_feb4m"]
 script/source = "extends Control
 
 
 func _on_spelen_pressed():
-	get_tree().change_scene_to_file(\"res://levelmenu.tscn\")
+	get_tree().change_scene_to_file(\"res://Scene's/levelmenu.tscn\")
 
 "
 
@@ -22,10 +24,11 @@ script = SubResource("GDScript_feb4m")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -167.0
-offset_top = -31.0
-offset_right = 985.0
-offset_bottom = 609.0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 1153.0
+offset_bottom = 638.0
+texture = ExtResource("1_i8js7")
 expand_mode = 2
 stretch_mode = 1
 
@@ -36,7 +39,7 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -36.0
+offset_left = -44.0
 offset_top = -198.0
 offset_right = 37.0
 offset_bottom = -132.0
