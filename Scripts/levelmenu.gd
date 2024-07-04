@@ -27,4 +27,3 @@ func _on_level_3_pressed():
 
 func _on_level_4_pressed():
 	get_tree().change_scene_to_file("res://Scene's/level4.tscn")
-	get_tree().

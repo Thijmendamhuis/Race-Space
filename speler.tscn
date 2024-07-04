@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://itrh6nibgj51"]
 
-[ext_resource type="Texture2D" path="res://astronaut.png" id="1_lecon"]
+[ext_resource type="Texture2D" uid="uid://b7jeu60wmy0nq" path="res://astronaut.png" id="1_lecon"]
 [ext_resource type="Script" path="res://Scripts/speler.gd" id="1_v7db6"]
 [ext_resource type="Shape2D" uid="uid://b42xb6wf5jkhn" path="res://speler_collision_shape.tres" id="3_k8qxp"]
 
@@ -23,7 +23,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Speler" type="CharacterBody2D"]
+[node name="Speler" type="CharacterBody2D" groups=["speler"]]
 collision_mask = 7
 script = ExtResource("1_v7db6")
 min_dood_degree = 45

@@ -11,13 +11,10 @@ config_version=5
 [application]
 
 config/name="15529"
-<<<<<<< HEAD
 run/main_scene="res://Scene's/menu.tscn"
-=======
-run/main_scene="res://Scene's/level1.tscn"
->>>>>>> d0133ea388fb1108bda12c408766b0dac045a15e
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+<<<<<<<HEADrun/main_scene="res://Scene's/menu.tscn"
 
 [dotnet]
 
