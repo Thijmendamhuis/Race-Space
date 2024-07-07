@@ -51,6 +51,10 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed * delta)
 
+	var collision = get_last_slide_collision()
+	if collision != null: 
+		handle_movement_collision(collision)
+
 	move_and_slide()
 
 	# Check if the player falls below the death threshold
@@ -90,3 +94,10 @@ func die():
 
 		var death_tween = get_tree().create_tween()
 		death_tween.tween_callback(func (): get_tree().reload_current_scene())
+
+
+func handle_movement_collision(collision: KinematicCollision2D):
+	if collision.get_collider() is Block:
+		var collision_angle = rad_to_deg(collision.get_angle())
+		if roundf(collision_angle) == 180:
+			(collision.get_collider() as Block).bump(player_mode)

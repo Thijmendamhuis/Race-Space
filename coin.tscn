@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://cai5hi8lwe0d1"]
+
+[ext_resource type="Texture2D" uid="uid://b5lx3sdgc6pft" path="res://assets/mario/Coin1.png" id="1_ak05a"]
+[ext_resource type="Texture2D" uid="uid://1y1dwdhyyq8d" path="res://assets/mario/Coin2.png" id="2_pi6x7"]
+[ext_resource type="Texture2D" uid="uid://cncv23x7nnug4" path="res://assets/mario/Coin3.png" id="3_aioqw"]
+[ext_resource type="Texture2D" uid="uid://dg1q6lrwbgygq" path="res://assets/mario/Coin4.png" id="4_kl70g"]
+[ext_resource type="Script" path="res://Coin.gd" id="5_t2gam"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nyyet"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ak05a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_pi6x7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_aioqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kl70g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Coin" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_nyyet")
+script = ExtResource("5_t2gam")

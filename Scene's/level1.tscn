@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://drhgv2s8awjwt"]
+[gd_scene load_steps=14 format=3 uid="uid://drhgv2s8awjwt"]
 
 [ext_resource type="Texture2D" uid="uid://dqjosmomm4rb8" path="res://imkv74m4q5g41.png" id="1_hufx7"]
 [ext_resource type="Texture2D" uid="uid://c0to0h0lso7l4" path="res://Terrain (16x16).png" id="2_c8ub6"]
@@ -7,6 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://itrh6nibgj51" path="res://speler.tscn" id="5_gfhdb"]
 [ext_resource type="PackedScene" uid="uid://b5ymbyi3rcru1" path="res://Scene's/next_level.tscn" id="6_346o5"]
 [ext_resource type="Script" path="res://Scene's/Button.gd" id="6_vtblh"]
+[ext_resource type="PackedScene" uid="uid://cr8v441wqfycy" path="res://Scene's/mysterybox.tscn" id="7_xyirk"]
+[ext_resource type="Script" path="res://Scene's/level_manager.gd" id="8_5vqfk"]
+[ext_resource type="PackedScene" uid="uid://cwh7gcslhri3u" path="res://ui.tscn" id="10_kqfdo"]
+[ext_resource type="PackedScene" uid="uid://cl8kgwj6nxibq" path="res://Scripts/collectable_coin.tscn" id="10_tn22o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8h6up"]
 texture = ExtResource("2_c8ub6")
@@ -618,9 +622,6 @@ offset_bottom = 1217.0
 texture = ExtResource("1_hufx7")
 stretch_mode = 1
 
-[node name="Brick" parent="TextureRect" instance=ExtResource("2_yplr6")]
-position = Vector2(1237.05, 1042)
-
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-2.99288, 5)
 tile_set = SubResource("TileSet_7rnik")
@@ -635,6 +636,7 @@ scale = Vector2(0.5, 0.5)
 [node name="Speler" parent="." instance=ExtResource("5_gfhdb")]
 position = Vector2(33.6703, 39.7442)
 scale = Vector2(0.5, 0.5)
+collision_mask = 23
 
 [node name="Camera2D" type="Camera2D" parent="Speler"]
 position = Vector2(1.99525, 0)
@@ -650,5 +652,24 @@ script = ExtResource("6_vtblh")
 
 [node name="Next_level" parent="." instance=ExtResource("6_346o5")]
 position = Vector2(2466.88, 13.7442)
+
+[node name="Brick" parent="." instance=ExtResource("2_yplr6")]
+position = Vector2(118.468, 0.7442)
+
+[node name="MysteryBox" parent="." instance=ExtResource("7_xyirk")]
+position = Vector2(175.333, -0.2558)
+scale = Vector2(0.997626, 1)
+
+[node name="LevelManager" type="Node" parent="." node_paths=PackedStringArray("ui", "speler") groups=["level_manager"]]
+script = ExtResource("8_5vqfk")
+ui = NodePath("../UI")
+speler = NodePath("../Speler")
+
+[node name="Coins" type="Node" parent="."]
+
+[node name="CollectableCoin" parent="Coins" instance=ExtResource("10_tn22o")]
+position = Vector2(197, 42)
+
+[node name="UI" parent="." instance=ExtResource("10_kqfdo")]
 
 [connection signal="pressed" from="Speler/Camera2D/Button" to="Speler/Camera2D/Button" method="_on_pressed"]

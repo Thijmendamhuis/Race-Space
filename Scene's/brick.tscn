@@ -6,6 +6,8 @@
 size = Vector2(16, 16)
 
 [node name="Brick" type="StaticBody2D"]
+collision_layer = 16
+collision_mask = 13
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_kaqmp")
