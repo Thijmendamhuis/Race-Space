@@ -9,4 +9,3 @@ func _on_body_entered(body):
 		
 		var next_level_path = "res://Scene's/level" + str(next_level_number) + ".tscn"
 		get_tree().change_scene_to_file(next_level_path)
-

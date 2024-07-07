@@ -23,7 +23,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Speler" type="CharacterBody2D"]
+[node name="Speler" type="CharacterBody2D" groups=["speler"]]
 collision_mask = 7
 script = ExtResource("1_v7db6")
 min_dood_degree = 45

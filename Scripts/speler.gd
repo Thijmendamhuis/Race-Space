@@ -10,6 +10,8 @@ enum SpelerMode {
 	BIG,
 }
 
+
+
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var area_collision_shape = $Area2D/AreaCollisionShape
 @onready var body_collision_shape = $BodyCollisionShape
@@ -34,6 +36,9 @@ enum SpelerMode {
 var player_mode = SpelerMode.SMALL
 var is_dead = false
 
+func _ready():
+	Global.player = self
+
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -52,16 +57,15 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, speed * delta)
 
 	move_and_slide()
-
-	# Check if the player falls below the death threshold
-	if global_position.y > death_y_threshold:
+	
+	if position.y >= 200:
 		die()
 
 func _on_area_2d_area_entered(area):
-	if area is Enemy:
+	if area is slime:
 		handle_enemy_collision(area)
 
-func handle_enemy_collision(enemy: Enemy):
+func handle_enemy_collision(enemy: slime):
 	if enemy == null or is_dead:
 		return
 
@@ -77,16 +81,5 @@ func on_enemy_stopped():
 	velocity.y = dood_y_velocity
 
 func die():
-	if player_mode == SpelerMode.SMALL:
-		is_dead = true
-		animated_sprite_2d.play("death")
-
-		area_2d.set_collision_layer_value(1, false)
-		area_2d.set_collision_mask_value(3, false)
-		set_collision_layer_value(1, false)
-		set_collision_mask_value(3, false)
-
-		set_physics_process(false)
-
-		var death_tween = get_tree().create_tween()
-		death_tween.tween_callback(func (): get_tree().reload_current_scene())
+	Global.respawn_player()
+	Global.score -= 300
