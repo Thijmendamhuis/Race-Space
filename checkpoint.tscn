@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://cpvk4ju552ij2"]
+
+[ext_resource type="Script" path="res://checkpoint.gd" id="1_kj2pm"]
+[ext_resource type="Texture2D" uid="uid://s1u32gphdgir" path="res://assets/Free/Items/Checkpoints/Checkpoint/Checkpoint (Flag Idle)(64x64).png" id="1_xv4j5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_anjgo"]
+size = Vector2(40, 51)
+
+[sub_resource type="Animation" id="Animation_0q1r4"]
+resource_name = "Activated"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nq3fw"]
+_data = {
+"Activated": SubResource("Animation_0q1r4")
+}
+
+[node name="Checkpoint" type="Node2D"]
+script = ExtResource("1_kj2pm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xv4j5")
+
+[node name="Area2D" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(3, 9)
+shape = SubResource("RectangleShape2D_anjgo")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_nq3fw")
+}
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

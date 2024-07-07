@@ -33,24 +33,20 @@ columns = 2
 
 [node name="1" type="Button" parent="Levels"]
 layout_mode = 2
-disabled = true
 text = "Level: 1"
 
 [node name="2" type="Button" parent="Levels"]
 layout_mode = 2
-disabled = true
 text = "Level: 2
 "
 
 [node name="3" type="Button" parent="Levels"]
 layout_mode = 2
-disabled = true
 text = "Level: 3
 "
 
 [node name="4" type="Button" parent="Levels"]
 layout_mode = 2
-disabled = true
 text = "Level: 4
 "
 
